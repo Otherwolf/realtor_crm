@@ -1,14 +1,10 @@
 <template>
-  <v-navigation-drawer
-    style="z-index: 1000"
-    permanent
-    expand-on-hover
-    color="secondary"
-  >
+  <v-navigation-drawer style="z-index: 1000" permanent expand-on-hover color="secondary">
     <v-list>
       <v-list-item class="px-2">
         <v-list-item-avatar>
-          <v-img src="https://png.pngtree.com/template/20191014/ourmid/pngtree-home-or-house-roof-logo-design-template-with-water-wave-image_317799.jpg"></v-img>
+          <v-img
+            src="https://png.pngtree.com/template/20191014/ourmid/pngtree-home-or-house-roof-logo-design-template-with-water-wave-image_317799.jpg"></v-img>
         </v-list-item-avatar>
       </v-list-item>
       <v-list-item link to="/profile">
@@ -21,9 +17,7 @@
       </v-list-item>
     </v-list>
     <v-divider></v-divider>
-    <v-list
-      nav
-      dense>
+    <v-list nav dense>
       <v-list-item link to="/index/lots">
         <v-list-item-icon>
           <v-icon color="primary">{{ icons.mdiFloorPlan }}</v-icon>
@@ -39,9 +33,7 @@
     </v-list>
     <template v-slot:append>
       <div class="pa-2">
-        <v-list
-          nav
-          dense>
+        <v-list nav dense>
           <v-list-item link href="/admin" v-if="user && user.is_superuser" target="_blank">
             <v-list-item-icon>
               <v-icon color="primary">{{ icons.mdiCogs }}</v-icon>
@@ -62,17 +54,11 @@
 
 <script>
 import {mapGetters} from 'vuex'
-import {
-  mdiLogoutVariant,
-  mdiCogs,
-  mdiAccountHardHat,
-  mdiDomain,
-  mdiFloorPlan
-} from '@mdi/js'
+import {mdiAccountHardHat, mdiCogs, mdiDomain, mdiFloorPlan, mdiLogoutVariant} from '@mdi/js'
 
 export default {
   name: 'Menu',
-  data () {
+  data() {
     return {
       icons: {
         mdiLogoutVariant,

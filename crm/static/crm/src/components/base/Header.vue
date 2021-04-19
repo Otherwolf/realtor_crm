@@ -94,7 +94,7 @@
             label="cпальни"
           >
             <template v-slot:item="{item}">
-              {{item.text}}
+              {{ item.text }}
             </template>
           </v-select>
         </v-col>
@@ -125,15 +125,11 @@
 </template>
 
 <script>
-import {
-  mdiMenuDown,
-  mdiCheckboxBlankOutline,
-  mdiCheckboxMarked
-} from '@mdi/js'
+import {mdiCheckboxBlankOutline, mdiCheckboxMarked, mdiMenuDown} from '@mdi/js'
 
 export default {
   name: 'Header',
-  data () {
+  data() {
     return {
       icons: {
         mdiMenuDown,
@@ -142,21 +138,11 @@ export default {
       },
       itemsPrice: ['лот', 'м²'],
       itemsBedroom: [
-        {
-          text: 'студия', value: 'студия'
-        },
-        {
-          text: '1', value: 'с 1-ой спальней'
-        },
-        {
-          text: '2', value: 'с 2-мя спальнями'
-        },
-        {
-          text: '3', value: 'с 3-мя спальнями'
-        },
-        {
-          text: '4+', value: 'с 4-ой спальней'
-        }
+        {text: 'студия', value: 'студия'},
+        {text: '1', value: 'с 1-ой спальней'},
+        {text: '2', value: 'с 2-мя спальнями'},
+        {text: '3', value: 'с 3-мя спальнями'},
+        {text: '4+', value: 'с 4-ой спальней'}
       ],
       optionsPrices: {
         locale: 'ru-RU',
@@ -179,14 +165,14 @@ export default {
     }
   },
   methods: {
-    formatAsCurrency (value, dec) {
+    formatAsCurrency(value, dec) {
       dec = dec || 0
       if (value === null) {
         return 0
       }
       return '' + value.toFixed(dec).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, '$1,')
     },
-    filter () {
+    filter() {
       this.$store.dispatch('Page/setFilter', this.data, {root: true})
     }
   }
@@ -197,13 +183,16 @@ export default {
 .centered-input >>> input {
   text-align: center
 }
+
 .col,
 .col-12 {
   padding: 15px 9px;
 }
+
 .v-input__control input {
   font-size: 0.8em;
 }
+
 .right-border {
   height: 25px;
   border-right: 1px solid grey;

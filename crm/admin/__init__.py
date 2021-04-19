@@ -1,19 +1,14 @@
-from crm.models import *
-from django.contrib.admin import ModelAdmin, register
+from django.contrib.admin import (ModelAdmin, register)
 from django.contrib.admin.models import LogEntry
-from crm.admin.inline import *
 
+from crm.admin.inline import *
+from crm.models import *
 
 
 @register(users.UserProfile)
 class ProfileAdmin(ModelAdmin):
     fields = ['user', 'phone']
-    list_display = (
-        'id',
-        '__str__',
-        'user',
-        'phone',
-    )
+    list_display = ('id', '__str__', 'user', 'phone',)
     search_fields = [
         'user__last_name',
         'user__first_name',
@@ -65,32 +60,28 @@ class LogEntryAdmin(ModelAdmin):
 
     def is_addition(self, obj):
         return obj.is_addition()
+
     is_addition.short_description = 'Добавление'
     is_addition.boolean = True
 
     def is_change(self, obj):
         return obj.is_change()
+
     is_change.short_description = 'Изменение'
     is_change.boolean = True
 
     def is_deletion(self, obj):
         return obj.is_deletion()
+
     is_deletion.short_description = 'Удаление'
     is_deletion.boolean = True
 
 
 @register(developers.Developer)
 class DeveloperAdmin(ModelAdmin):
-    list_display = (
-        'id',
-        '__str__',
-        'updated_by',
-        'updated_at',
-    )
+    list_display = ('id', '__str__', 'updated_by', 'updated_at',)
     readonly_fields = ['updated_by', 'updated_at']
-    search_fields = [
-        'name'
-    ]
+    search_fields = ['name', ]
     inlines = (
         ContactsInlineAdmin,
         ImageInlineAdmin,
@@ -114,7 +105,6 @@ class DeveloperAdmin(ModelAdmin):
         self.fieldsets = full_fieldsets
         return super().get_fieldsets(request, obj)
 
-
     def save_model(self, request, obj, form, change):
         obj.updated_by = request.user
         return super().save_model(request, obj, form, change)
@@ -124,47 +114,32 @@ class DeveloperAdmin(ModelAdmin):
 class RegionAdmin(ModelAdmin):
     fields = ['name']
     list_display = ['name']
-    search_fields = [
-        'name'
-    ]
+    search_fields = ['name', ]
 
 
 @register(base.ConstructionTech)
 class ConstructionTechAdmin(ModelAdmin):
     fields = ['name']
-    search_fields = [
-        'name'
-    ]
+    search_fields = ['name', ]
 
 
 @register(base.PremisesType)
 class PremisesTypeAdmin(ModelAdmin):
     fields = ['name']
-    search_fields = [
-        'name'
-    ]
+    search_fields = ['name', ]
 
 
 @register(base.ObjectClass)
 class ObjectClassAdmin(ModelAdmin):
     fields = ['name']
-    search_fields = [
-        'name'
-    ]
+    search_fields = ['name', ]
 
 
 @register(complexes.Complex)
 class ComplexAdmin(ModelAdmin):
-    list_display = (
-        'id',
-        '__str__',
-        'updated_by',
-        'updated_at',
-    )
+    list_display = ('id', '__str__', 'updated_by', 'updated_at',)
     readonly_fields = ['updated_by', 'updated_at']
-    search_fields = [
-        '__all__'
-    ]
+    search_fields = ['__all__', ]
     inlines = (
         LayoutInlineAdmin,
         LinkInlineAdmin,
@@ -234,8 +209,6 @@ class ComplexAdmin(ModelAdmin):
         self.fieldsets = full_fieldsets
         return super().get_fieldsets(request, obj)
 
-
-
     def save_model(self, request, obj, form, change):
         obj.updated_by = request.user
         return super().save_model(request, obj, form, change)
@@ -243,17 +216,9 @@ class ComplexAdmin(ModelAdmin):
 
 @register(complexes.Floor)
 class FloorAdmin(ModelAdmin):
-    list_display = (
-        'id',
-        '__str__',
-        'updated_by',
-        'updated_at',
-        'image_tag'
-    )
+    list_display = ('id', '__str__', 'updated_by', 'updated_at', 'image_tag')
     readonly_fields = ['updated_by', 'updated_at', 'image_tag']
-    search_fields = [
-        '__all__'
-    ]
+    search_fields = ['__all__', ]
 
     def get_fieldsets(self, request, obj=None):
         full_fieldsets = [
@@ -270,29 +235,19 @@ class FloorAdmin(ModelAdmin):
         self.fieldsets = full_fieldsets
         return super().get_fieldsets(request, obj)
 
-
     def save_model(self, request, obj, form, change):
         obj.updated_by = request.user
         return super().save_model(request, obj, form, change)
 
 
-
 @register(complexes.Corp)
 class CorpAdmin(ModelAdmin):
-    list_display = (
-        'id',
-        '__str__',
-        'updated_by',
-        'updated_at',
-    )
-    search_fields = [
-        '__all__'
-    ]
+    list_display = ('id', '__str__', 'updated_by', 'updated_at',)
+    search_fields = ['__all__', ]
     readonly_fields = ['updated_by', 'updated_at']
     inlines = (
         LayoutInlineAdmin,
     )
-
 
     def get_fieldsets(self, request, obj=None):
         full_fieldsets = [
@@ -313,24 +268,15 @@ class CorpAdmin(ModelAdmin):
         self.fieldsets = full_fieldsets
         return super().get_fieldsets(request, obj)
 
-
     def save_model(self, request, obj, form, change):
         obj.updated_by = request.user
         return super().save_model(request, obj, form, change)
 
 
-
 class LotAdmin(ModelAdmin):
-    list_display = (
-        'id',
-        '__str__',
-        'updated_by',
-        'updated_at',
-    )
-    search_fields = [
-        '__all__'
-    ]
-    readonly_fields = ['updated_by', 'updated_at']
+    list_display = ('id', '__str__', 'updated_by', 'updated_at',)
+    search_fields = ['__all__', ]
+    readonly_fields = ['updated_by', 'updated_at', ]
     inlines = (
         ImageInlineAdmin,
         LinkInlineAdmin,
@@ -339,26 +285,16 @@ class LotAdmin(ModelAdmin):
         TagInlineAdmin
     )
 
-
     def save_model(self, request, obj, form, change):
         obj.updated_by = request.user
         return super().save_model(request, obj, form, change)
 
 
-
 @register(lots.Plan)
 class PlanAdmin(ModelAdmin):
-    list_display = (
-        'id',
-        '__str__',
-        'updated_by',
-        'updated_at',
-        'image_tag'
-    )
+    list_display = ('id', '__str__', 'updated_by', 'updated_at', 'image_tag')
     readonly_fields = ['updated_by', 'updated_at', 'image_tag']
-    search_fields = [
-        '__all__'
-    ]
+    search_fields = ['__all__', ]
 
     def get_fieldsets(self, request, obj=None):
         full_fieldsets = [
@@ -375,7 +311,6 @@ class PlanAdmin(ModelAdmin):
         ]
         self.fieldsets = full_fieldsets
         return super().get_fieldsets(request, obj)
-
 
     def save_model(self, request, obj, form, change):
         obj.updated_by = request.user
@@ -448,3 +383,21 @@ class OldBuildingLotAdmin(LotAdmin):
         ]
         self.fieldsets = full_fieldsets
         return super().get_fieldsets(request, obj)
+
+
+__all__ = (
+    'ProfileAdmin',
+    'LogEntryAdmin',
+    'DeveloperAdmin',
+    'RegionAdmin',
+    'ConstructionTechAdmin',
+    'PremisesTypeAdmin',
+    'ObjectClassAdmin',
+    'ComplexAdmin',
+    'FloorAdmin',
+    'CorpAdmin',
+    'LotAdmin',
+    'PlanAdmin',
+    'NewBuildingLotAdmin',
+    'OldBuildingLotAdmin',
+)

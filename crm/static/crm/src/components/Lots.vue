@@ -14,9 +14,8 @@
       class="elevation-0"
     >
       <template v-slot:item.url_plan="{ item }">
-        <div :class="'complex-' + item.complex.id" >
-          <fc-image :link="item.url_plan" v-if="item.url_plan">
-          </fc-image>
+        <div :class="'complex-' + item.complex.id">
+          <fc-image :link="item.url_plan" v-if="item.url_plan"/>
         </div>
       </template>
       <template v-slot:item.price="{ item }">
@@ -36,7 +35,8 @@
         :should-handle="!loading"
         scrollContainer="scroll"
         v-if="!isFinished"
-        class="text-center">
+        class="text-center"
+      >
         Загрузка...
       </mugen-scroll>
     </div>
@@ -54,24 +54,24 @@ export default {
     'fc-image': FCImage,
     'mugen-scroll': MugenScroll
   },
-  data () {
+  data() {
     return {
       selected: [],
       loading: false,
       counter: 30,
       headers: [
-        { text: '№', value: 'n_on_price' },
-        { text: '', value: 'url_plan' },
-        { text: 'Наименование', value: '__str__' },
-        { text: 'Корпус', value: 'corp_name' },
-        { text: 'Этаж', value: 'floor' },
-        { text: 'Площадь', value: 's' },
-        { text: 'цена, ₽', value: 'price' },
-        { text: 'цена за м², ₽', value: 'price_per_m' }
+        {text: '№', value: 'n_on_price'},
+        {text: '', value: 'url_plan'},
+        {text: 'Наименование', value: '__str__'},
+        {text: 'Корпус', value: 'corp_name'},
+        {text: 'Этаж', value: 'floor'},
+        {text: 'Площадь', value: 's'},
+        {text: 'цена, ₽', value: 'price'},
+        {text: 'цена за м², ₽', value: 'price_per_m'}
       ]
     }
   },
-  created () {
+  created() {
     this.fetchData()
   },
   computed: {
@@ -79,13 +79,13 @@ export default {
     ...mapGetters('Page', {isFinished: 'isFinished'})
   },
   methods: {
-    clearSelect () {
+    clearSelect() {
       const itemsForRemove = document.querySelectorAll('.v-data-table__selected')
       itemsForRemove.forEach(item => {
         item.classList.remove('v-data-table__selected')
       })
     },
-    fetchData () {
+    fetchData() {
       this.loading = true
       this.$store.dispatch('Page/load', {
         page: this.$route.name
@@ -97,12 +97,9 @@ export default {
         this.loading = false
       }, 10)
     },
-    humanized_sum (sum) {
+    humanized_sum(sum) {
       return parseInt(sum).toLocaleString()
     }
   }
 }
 </script>
-
-<style scoped>
-</style>

@@ -1,25 +1,14 @@
 <template>
   <div style="height: 93vh; overflow: scroll" class="body-container">
     <v-row v-if="complex">
-      <v-col
-        md="12"
-        sm="12"
-        cols="12">
-        <v-card
-          min-height="70"
-          class="pa-3"
-        >
+      <v-col md="12" sm="12" cols="12">
+        <v-card min-height="70" class="pa-3">
           <h3> {{ complex.name }} </h3>
           <br>
           <span class="grey--text float-right"><strong> {{ complex.developer.name }} </strong></span>
           <span class="primary--text"><strong> {{ complex.region.name }}</strong> {{ complex.address }} </span>
         </v-card>
-        <v-card
-          class="pa-1"
-          outlined
-          color="transparent"
-          v-if="complex.images && complex.images.length"
-        >
+        <v-card class="pa-1" outlined color="transparent" v-if="complex.images && complex.images.length">
           <v-carousel
             :show-arrows="complex.images.length > 1"
             hide-delimiters
@@ -30,21 +19,14 @@
             cycle
             show-arrows-on-hover
             style="width: auto; margin: auto"
-            height="350">
-            <v-carousel-item
-              v-for="(image) in complex.images"
-              :key="image.id"
-            >
-              <v-img :src="image.get_url" contain height="350"></v-img>
+            height="350"
+          >
+            <v-carousel-item v-for="image in complex.images" :key="image.id">
+              <v-img :src="image.get_url" contain height="350"/>
             </v-carousel-item>
           </v-carousel>
         </v-card>
-        <v-card
-          color="transparent"
-          class="pa-1"
-          outlined
-          v-if="complex.links && complex.links.length"
-        >
+        <v-card color="transparent" class="pa-1" outlined v-if="complex.links && complex.links.length">
           <v-chip
             class="ma-2"
             color="primary"
@@ -58,7 +40,10 @@
           </v-chip>
         </v-card>
         <v-expansion-panels multiple>
-          <v-expansion-panel v-if="complex.contacts && complex.contacts.length" style="background-color: transparent !important;">
+          <v-expansion-panel
+            v-if="complex.contacts && complex.contacts.length"
+            style="background-color: transparent !important;"
+          >
             <v-expansion-panel-header :expand-icon="icons.mdiChevronDown">
               <h5 class="primary--text text-right">Контакты</h5>
             </v-expansion-panel-header>
@@ -68,17 +53,20 @@
                 class="pa-1"
                 outlined
                 :key="contact.id"
-                v-for="(contact) in complex.contacts"
+                v-for="contact in complex.contacts"
                 v-if="complex.contacts && complex.contacts.length"
               >
-                <h5 class="primary--text">{{contact.name}}</h5>
-                <a :href="`tel:${contact.phone}`" v-if="contact.phone">{{contact.phone}}<br></a>
-                <a :href="`mailto:${contact.email}`" v-if="contact.email">{{contact.email}}</a>
-                <p class="grey--text" v-if="contact.note">{{contact.note}}</p>
+                <h5 class="primary--text">{{ contact.name }}</h5>
+                <a :href="`tel:${contact.phone}`" v-if="contact.phone">{{ contact.phone }}<br></a>
+                <a :href="`mailto:${contact.email}`" v-if="contact.email">{{ contact.email }}</a>
+                <p class="grey--text" v-if="contact.note">{{ contact.note }}</p>
               </v-card>
             </v-expansion-panel-content>
           </v-expansion-panel>
-          <v-expansion-panel v-if="complex.files && complex.files.length" style="background-color: transparent !important;">
+          <v-expansion-panel
+            v-if="complex.files && complex.files.length"
+            style="background-color: transparent !important;"
+          >
             <v-expansion-panel-header :expand-icon="icons.mdiChevronDown">
               <h5 class="primary--text text-right">Презентации и документы</h5>
             </v-expansion-panel-header>
@@ -100,10 +88,10 @@
                 >
                   <h5 v-if="file.name">{{ file.name }}</h5>
                   <a :href="file.get_url">
-                    <span>{{file.filename}}</span>
+                    <span>{{ file.filename }}</span>
                   </a>
                   <p class="grey--text">
-                    <span>{{ file.get_created_at }}</span> | <span>{{file.get_size}}</span>
+                    <span>{{ file.get_created_at }}</span> | <span>{{ file.get_size }}</span>
                   </p>
                 </v-card>
               </v-card>
@@ -126,8 +114,8 @@
               </v-expansion-panel-header>
               <v-expansion-panel-content>
                 <v-simple-table>
-                <template v-slot:default>
-                  <tbody>
+                  <template v-slot:default>
+                    <tbody>
                     <tr v-if="complex.premises_type">
                       <td>Вид объекта</td>
                       <td>{{ complex.premises_type.name }}</td>
@@ -180,9 +168,9 @@
                       <td>Транспортная доступность</td>
                       <td>{{ complex.transport_accessibility }}</td>
                     </tr>
-                  </tbody>
-                </template>
-              </v-simple-table>
+                    </tbody>
+                  </template>
+                </v-simple-table>
               </v-expansion-panel-content>
             </v-expansion-panel>
             <v-expansion-panel>
@@ -191,8 +179,8 @@
               </v-expansion-panel-header>
               <v-expansion-panel-content>
                 <v-simple-table>
-                <template v-slot:default>
-                  <tbody>
+                  <template v-slot:default>
+                    <tbody>
                     <tr v-if="complex.trim">
                       <td>Отделка</td>
                       <td>{{ complex.trim }}</td>
@@ -217,9 +205,9 @@
                       <td>Кондиционирование</td>
                       <td>{{ complex.conditioning }}</td>
                     </tr>
-                  </tbody>
-                </template>
-              </v-simple-table>
+                    </tbody>
+                  </template>
+                </v-simple-table>
               </v-expansion-panel-content>
             </v-expansion-panel>
             <v-expansion-panel>
@@ -228,8 +216,8 @@
               </v-expansion-panel-header>
               <v-expansion-panel-content>
                 <v-simple-table>
-                <template v-slot:default>
-                  <tbody>
+                  <template v-slot:default>
+                    <tbody>
                     <tr v-if="complex.cadastre">
                       <td>Кадастр</td>
                       <td>{{ complex.cadastre }}</td>
@@ -286,9 +274,9 @@
                       <td>Вознаграждение</td>
                       <td>{{ complex.reward }}</td>
                     </tr>
-                  </tbody>
-                </template>
-              </v-simple-table>
+                    </tbody>
+                  </template>
+                </v-simple-table>
               </v-expansion-panel-content>
             </v-expansion-panel>
             <v-expansion-panel>
@@ -297,15 +285,15 @@
               </v-expansion-panel-header>
               <v-expansion-panel-content>
                 <v-simple-table>
-                <template v-slot:default>
-                  <tbody>
+                  <template v-slot:default>
+                    <tbody>
                     <tr v-if="complex">
                       <td>Будни</td>
                       <td>{{ complex.weekdays_from }}-{{ complex.weekdays_to }}</td>
                     </tr>
                     <tr v-if="complex">
                       <td>Выходные</td>
-                      <td>{{ complex.weekend_form }}-{{complex.weekend_to}}</td>
+                      <td>{{ complex.weekend_form }}-{{ complex.weekend_to }}</td>
                     </tr>
                     <tr v-if="complex.sales_office_address">
                       <td>Адрес офиса продаж</td>
@@ -319,9 +307,9 @@
                       <td>Паркинг</td>
                       <td>{{ complex.parking_close }}</td>
                     </tr>
-                  </tbody>
-                </template>
-              </v-simple-table>
+                    </tbody>
+                  </template>
+                </v-simple-table>
               </v-expansion-panel-content>
             </v-expansion-panel>
           </v-expansion-panels>
@@ -333,16 +321,11 @@
 
 <script>
 import {mapGetters} from 'vuex'
-import {
-  mdiMenuLeft,
-  mdiMenuRight,
-  mdiCircleOutline,
-  mdiChevronDown
-} from '@mdi/js'
+import {mdiChevronDown, mdiCircleOutline, mdiMenuLeft, mdiMenuRight} from '@mdi/js'
 
 export default {
   name: 'MainComplex',
-  data () {
+  data() {
     return {
       img: 0,
       icons: {
@@ -357,7 +340,7 @@ export default {
     ...mapGetters('Page', {complex: 'getMain'})
   },
   methods: {
-    humanized_sum (sum) {
+    humanized_sum(sum) {
       return parseInt(sum).toLocaleString()
     }
   }

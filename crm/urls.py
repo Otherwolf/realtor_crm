@@ -1,9 +1,11 @@
-from django.contrib.auth.decorators import login_required
-from django.urls import path, re_path
 from django.conf.urls.static import static
-from project import settings
-from crm.views import base, rest
+from django.contrib.auth.decorators import login_required
+from django.urls import path
+
 from crm.views import auth
+from crm.views import base, rest
+from project import settings
+
 
 def l(class_view):
     return login_required(class_view.as_view(), redirect_field_name='login')

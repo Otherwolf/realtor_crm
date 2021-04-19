@@ -1,1 +1,23 @@
-[{"model": "crm.objectclass", "pk": 2, "fields": {"name": "Делюкс"}}, {"model": "crm.objectclass", "pk": 3, "fields": {"name": "Премиум"}}, {"model": "crm.objectclass", "pk": 4, "fields": {"name": "Бизнес"}}]
+[
+  {
+    "model": "crm.objectclass",
+    "pk": 2,
+    "fields": {
+      "name": "Делюкс"
+    }
+  },
+  {
+    "model": "crm.objectclass",
+    "pk": 3,
+    "fields": {
+      "name": "Премиум"
+    }
+  },
+  {
+    "model": "crm.objectclass",
+    "pk": 4,
+    "fields": {
+      "name": "Бизнес"
+    }
+  }
+]

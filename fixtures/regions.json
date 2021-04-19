@@ -1,1 +1,877 @@
-[{"model": "crm.region", "pk": 3, "fields": {"name": "Академический"}}, {"model": "crm.region", "pk": 4, "fields": {"name": "Алексеевский"}}, {"model": "crm.region", "pk": 5, "fields": {"name": "Алтуфьевский"}}, {"model": "crm.region", "pk": 6, "fields": {"name": "Арбат"}}, {"model": "crm.region", "pk": 7, "fields": {"name": "Аэропорт"}}, {"model": "crm.region", "pk": 8, "fields": {"name": "Бабушкинский"}}, {"model": "crm.region", "pk": 9, "fields": {"name": "Басманный"}}, {"model": "crm.region", "pk": 10, "fields": {"name": "Беговой"}}, {"model": "crm.region", "pk": 11, "fields": {"name": "Бескудниковский"}}, {"model": "crm.region", "pk": 12, "fields": {"name": "Бибирево"}}, {"model": "crm.region", "pk": 13, "fields": {"name": "Бирюлёво Восточное"}}, {"model": "crm.region", "pk": 14, "fields": {"name": "Бирюлёво Западное"}}, {"model": "crm.region", "pk": 15, "fields": {"name": "Богородское"}}, {"model": "crm.region", "pk": 16, "fields": {"name": "Братеево"}}, {"model": "crm.region", "pk": 17, "fields": {"name": "Бутово Северное"}}, {"model": "crm.region", "pk": 18, "fields": {"name": "Бутово Южное"}}, {"model": "crm.region", "pk": 19, "fields": {"name": "Бутырский"}}, {"model": "crm.region", "pk": 20, "fields": {"name": "Вешняки"}}, {"model": "crm.region", "pk": 21, "fields": {"name": "Внуково"}}, {"model": "crm.region", "pk": 22, "fields": {"name": "Войковский"}}, {"model": "crm.region", "pk": 23, "fields": {"name": "Восточный"}}, {"model": "crm.region", "pk": 24, "fields": {"name": "Выхино-Жулебино"}}, {"model": "crm.region", "pk": 25, "fields": {"name": "Гагаринский"}}, {"model": "crm.region", "pk": 26, "fields": {"name": "Головинский"}}, {"model": "crm.region", "pk": 27, "fields": {"name": "Гольяново"}}, {"model": "crm.region", "pk": 28, "fields": {"name": "Даниловский"}}, {"model": "crm.region", "pk": 29, "fields": {"name": "Дегунино Восточное"}}, {"model": "crm.region", "pk": 30, "fields": {"name": "Дегунино Западное"}}, {"model": "crm.region", "pk": 31, "fields": {"name": "Дмитровский"}}, {"model": "crm.region", "pk": 32, "fields": {"name": "Донской"}}, {"model": "crm.region", "pk": 33, "fields": {"name": "Дорогомилово"}}, {"model": "crm.region", "pk": 34, "fields": {"name": "Замоскворечье"}}, {"model": "crm.region", "pk": 35, "fields": {"name": "Зюзино"}}, {"model": "crm.region", "pk": 36, "fields": {"name": "Зябликово"}}, {"model": "crm.region", "pk": 37, "fields": {"name": "Ивановское"}}, {"model": "crm.region", "pk": 38, "fields": {"name": "Измайлово Восточное"}}, {"model": "crm.region", "pk": 39, "fields": {"name": "Измайлово"}}, {"model": "crm.region", "pk": 40, "fields": {"name": "Измайлово Северное"}}, {"model": "crm.region", "pk": 41, "fields": {"name": "Капотня"}}, {"model": "crm.region", "pk": 42, "fields": {"name": "Коньково"}}, {"model": "crm.region", "pk": 43, "fields": {"name": "Коптево"}}, {"model": "crm.region", "pk": 44, "fields": {"name": "Косино-Ухтомский"}}, {"model": "crm.region", "pk": 45, "fields": {"name": "Котловка"}}, {"model": "crm.region", "pk": 46, "fields": {"name": "Красносельский"}}, {"model": "crm.region", "pk": 47, "fields": {"name": "Крылатское"}}, {"model": "crm.region", "pk": 48, "fields": {"name": "Крюково"}}, {"model": "crm.region", "pk": 49, "fields": {"name": "Кузьминки"}}, {"model": "crm.region", "pk": 50, "fields": {"name": "Кунцево"}}, {"model": "crm.region", "pk": 51, "fields": {"name": "Куркино"}}, {"model": "crm.region", "pk": 52, "fields": {"name": "Левобережный"}}, {"model": "crm.region", "pk": 53, "fields": {"name": "Лефортово"}}, {"model": "crm.region", "pk": 54, "fields": {"name": "Лианозово"}}, {"model": "crm.region", "pk": 55, "fields": {"name": "Ломоносовский"}}, {"model": "crm.region", "pk": 56, "fields": {"name": "Лосиноостровский"}}, {"model": "crm.region", "pk": 57, "fields": {"name": "Люблино"}}, {"model": "crm.region", "pk": 58, "fields": {"name": "Марфино"}}, {"model": "crm.region", "pk": 59, "fields": {"name": "Марьина роща"}}, {"model": "crm.region", "pk": 60, "fields": {"name": "Марьино"}}, {"model": "crm.region", "pk": 61, "fields": {"name": "Матушкино"}}, {"model": "crm.region", "pk": 62, "fields": {"name": "Медведково Северное"}}, {"model": "crm.region", "pk": 63, "fields": {"name": "Медведково Южное"}}, {"model": "crm.region", "pk": 64, "fields": {"name": "Метрогородок"}}, {"model": "crm.region", "pk": 65, "fields": {"name": "Мещанский"}}, {"model": "crm.region", "pk": 66, "fields": {"name": "Митино"}}, {"model": "crm.region", "pk": 67, "fields": {"name": "Можайский"}}, {"model": "crm.region", "pk": 68, "fields": {"name": "Молжаниновский"}}, {"model": "crm.region", "pk": 69, "fields": {"name": "Москворечье-Сабурово"}}, {"model": "crm.region", "pk": 70, "fields": {"name": "Нагатино-Садовники"}}, {"model": "crm.region", "pk": 71, "fields": {"name": "Нагатинский затон"}}, {"model": "crm.region", "pk": 72, "fields": {"name": "Нагорный"}}, {"model": "crm.region", "pk": 73, "fields": {"name": "Некрасовка"}}, {"model": "crm.region", "pk": 74, "fields": {"name": "Нижегородский"}}, {"model": "crm.region", "pk": 75, "fields": {"name": "Ново-Переделкино"}}, {"model": "crm.region", "pk": 76, "fields": {"name": "Новогиреево"}}, {"model": "crm.region", "pk": 77, "fields": {"name": "Новокосино"}}, {"model": "crm.region", "pk": 78, "fields": {"name": "Обручевский"}}, {"model": "crm.region", "pk": 79, "fields": {"name": "Орехово-Борисово Северное"}}, {"model": "crm.region", "pk": 80, "fields": {"name": "Орехово-Борисово Южное"}}, {"model": "crm.region", "pk": 81, "fields": {"name": "Останкинский"}}, {"model": "crm.region", "pk": 82, "fields": {"name": "Отрадное"}}, {"model": "crm.region", "pk": 83, "fields": {"name": "Очаково-Матвеевское"}}, {"model": "crm.region", "pk": 84, "fields": {"name": "Перово"}}, {"model": "crm.region", "pk": 85, "fields": {"name": "Печатники"}}, {"model": "crm.region", "pk": 86, "fields": {"name": "Покровское-Стрешнево"}}, {"model": "crm.region", "pk": 87, "fields": {"name": "Преображенское"}}, {"model": "crm.region", "pk": 88, "fields": {"name": "Пресненский"}}, {"model": "crm.region", "pk": 89, "fields": {"name": "Проспект Вернадского"}}, {"model": "crm.region", "pk": 90, "fields": {"name": "Раменки"}}, {"model": "crm.region", "pk": 91, "fields": {"name": "Ростокино"}}, {"model": "crm.region", "pk": 92, "fields": {"name": "Рязанский"}}, {"model": "crm.region", "pk": 93, "fields": {"name": "Савёлки"}}, {"model": "crm.region", "pk": 94, "fields": {"name": "Савёловский"}}, {"model": "crm.region", "pk": 95, "fields": {"name": "Свиблово"}}, {"model": "crm.region", "pk": 96, "fields": {"name": "Северный"}}, {"model": "crm.region", "pk": 97, "fields": {"name": "Силино"}}, {"model": "crm.region", "pk": 98, "fields": {"name": "Сокол"}}, {"model": "crm.region", "pk": 99, "fields": {"name": "Соколиная гора"}}, {"model": "crm.region", "pk": 100, "fields": {"name": "Сокольники"}}, {"model": "crm.region", "pk": 101, "fields": {"name": "Солнцево"}}, {"model": "crm.region", "pk": 102, "fields": {"name": "Старое Крюково"}}, {"model": "crm.region", "pk": 103, "fields": {"name": "Строгино"}}, {"model": "crm.region", "pk": 104, "fields": {"name": "Таганский"}}, {"model": "crm.region", "pk": 105, "fields": {"name": "Тверской"}}, {"model": "crm.region", "pk": 106, "fields": {"name": "Текстильщики"}}, {"model": "crm.region", "pk": 107, "fields": {"name": "Тёплый Стан"}}, {"model": "crm.region", "pk": 108, "fields": {"name": "Тимирязевский"}}, {"model": "crm.region", "pk": 109, "fields": {"name": "Тропарёво-Никулино"}}, {"model": "crm.region", "pk": 110, "fields": {"name": "Тушино Северное"}}, {"model": "crm.region", "pk": 111, "fields": {"name": "Тушино Южное"}}, {"model": "crm.region", "pk": 112, "fields": {"name": "Филёвский парк"}}, {"model": "crm.region", "pk": 113, "fields": {"name": "Фили-Давыдково"}}, {"model": "crm.region", "pk": 114, "fields": {"name": "Хамовники"}}, {"model": "crm.region", "pk": 115, "fields": {"name": "Ховрино"}}, {"model": "crm.region", "pk": 116, "fields": {"name": "Хорошёво-Мневники"}}, {"model": "crm.region", "pk": 117, "fields": {"name": "Хорошёвский"}}, {"model": "crm.region", "pk": 118, "fields": {"name": "Царицыно"}}, {"model": "crm.region", "pk": 119, "fields": {"name": "Черёмушки"}}, {"model": "crm.region", "pk": 120, "fields": {"name": "Чертаново Северное"}}, {"model": "crm.region", "pk": 121, "fields": {"name": "Чертаново Центральное"}}, {"model": "crm.region", "pk": 122, "fields": {"name": "Чертаново Южное"}}, {"model": "crm.region", "pk": 123, "fields": {"name": "Щукино"}}, {"model": "crm.region", "pk": 124, "fields": {"name": "Южнопортовый"}}, {"model": "crm.region", "pk": 125, "fields": {"name": "Якиманка"}}, {"model": "crm.region", "pk": 126, "fields": {"name": "Ярославский"}}, {"model": "crm.region", "pk": 127, "fields": {"name": "Ясенево"}}]
+[
+  {
+    "model": "crm.region",
+    "pk": 3,
+    "fields": {
+      "name": "Академический"
+    }
+  },
+  {
+    "model": "crm.region",
+    "pk": 4,
+    "fields": {
+      "name": "Алексеевский"
+    }
+  },
+  {
+    "model": "crm.region",
+    "pk": 5,
+    "fields": {
+      "name": "Алтуфьевский"
+    }
+  },
+  {
+    "model": "crm.region",
+    "pk": 6,
+    "fields": {
+      "name": "Арбат"
+    }
+  },
+  {
+    "model": "crm.region",
+    "pk": 7,
+    "fields": {
+      "name": "Аэропорт"
+    }
+  },
+  {
+    "model": "crm.region",
+    "pk": 8,
+    "fields": {
+      "name": "Бабушкинский"
+    }
+  },
+  {
+    "model": "crm.region",
+    "pk": 9,
+    "fields": {
+      "name": "Басманный"
+    }
+  },
+  {
+    "model": "crm.region",
+    "pk": 10,
+    "fields": {
+      "name": "Беговой"
+    }
+  },
+  {
+    "model": "crm.region",
+    "pk": 11,
+    "fields": {
+      "name": "Бескудниковский"
+    }
+  },
+  {
+    "model": "crm.region",
+    "pk": 12,
+    "fields": {
+      "name": "Бибирево"
+    }
+  },
+  {
+    "model": "crm.region",
+    "pk": 13,
+    "fields": {
+      "name": "Бирюлёво Восточное"
+    }
+  },
+  {
+    "model": "crm.region",
+    "pk": 14,
+    "fields": {
+      "name": "Бирюлёво Западное"
+    }
+  },
+  {
+    "model": "crm.region",
+    "pk": 15,
+    "fields": {
+      "name": "Богородское"
+    }
+  },
+  {
+    "model": "crm.region",
+    "pk": 16,
+    "fields": {
+      "name": "Братеево"
+    }
+  },
+  {
+    "model": "crm.region",
+    "pk": 17,
+    "fields": {
+      "name": "Бутово Северное"
+    }
+  },
+  {
+    "model": "crm.region",
+    "pk": 18,
+    "fields": {
+      "name": "Бутово Южное"
+    }
+  },
+  {
+    "model": "crm.region",
+    "pk": 19,
+    "fields": {
+      "name": "Бутырский"
+    }
+  },
+  {
+    "model": "crm.region",
+    "pk": 20,
+    "fields": {
+      "name": "Вешняки"
+    }
+  },
+  {
+    "model": "crm.region",
+    "pk": 21,
+    "fields": {
+      "name": "Внуково"
+    }
+  },
+  {
+    "model": "crm.region",
+    "pk": 22,
+    "fields": {
+      "name": "Войковский"
+    }
+  },
+  {
+    "model": "crm.region",
+    "pk": 23,
+    "fields": {
+      "name": "Восточный"
+    }
+  },
+  {
+    "model": "crm.region",
+    "pk": 24,
+    "fields": {
+      "name": "Выхино-Жулебино"
+    }
+  },
+  {
+    "model": "crm.region",
+    "pk": 25,
+    "fields": {
+      "name": "Гагаринский"
+    }
+  },
+  {
+    "model": "crm.region",
+    "pk": 26,
+    "fields": {
+      "name": "Головинский"
+    }
+  },
+  {
+    "model": "crm.region",
+    "pk": 27,
+    "fields": {
+      "name": "Гольяново"
+    }
+  },
+  {
+    "model": "crm.region",
+    "pk": 28,
+    "fields": {
+      "name": "Даниловский"
+    }
+  },
+  {
+    "model": "crm.region",
+    "pk": 29,
+    "fields": {
+      "name": "Дегунино Восточное"
+    }
+  },
+  {
+    "model": "crm.region",
+    "pk": 30,
+    "fields": {
+      "name": "Дегунино Западное"
+    }
+  },
+  {
+    "model": "crm.region",
+    "pk": 31,
+    "fields": {
+      "name": "Дмитровский"
+    }
+  },
+  {
+    "model": "crm.region",
+    "pk": 32,
+    "fields": {
+      "name": "Донской"
+    }
+  },
+  {
+    "model": "crm.region",
+    "pk": 33,
+    "fields": {
+      "name": "Дорогомилово"
+    }
+  },
+  {
+    "model": "crm.region",
+    "pk": 34,
+    "fields": {
+      "name": "Замоскворечье"
+    }
+  },
+  {
+    "model": "crm.region",
+    "pk": 35,
+    "fields": {
+      "name": "Зюзино"
+    }
+  },
+  {
+    "model": "crm.region",
+    "pk": 36,
+    "fields": {
+      "name": "Зябликово"
+    }
+  },
+  {
+    "model": "crm.region",
+    "pk": 37,
+    "fields": {
+      "name": "Ивановское"
+    }
+  },
+  {
+    "model": "crm.region",
+    "pk": 38,
+    "fields": {
+      "name": "Измайлово Восточное"
+    }
+  },
+  {
+    "model": "crm.region",
+    "pk": 39,
+    "fields": {
+      "name": "Измайлово"
+    }
+  },
+  {
+    "model": "crm.region",
+    "pk": 40,
+    "fields": {
+      "name": "Измайлово Северное"
+    }
+  },
+  {
+    "model": "crm.region",
+    "pk": 41,
+    "fields": {
+      "name": "Капотня"
+    }
+  },
+  {
+    "model": "crm.region",
+    "pk": 42,
+    "fields": {
+      "name": "Коньково"
+    }
+  },
+  {
+    "model": "crm.region",
+    "pk": 43,
+    "fields": {
+      "name": "Коптево"
+    }
+  },
+  {
+    "model": "crm.region",
+    "pk": 44,
+    "fields": {
+      "name": "Косино-Ухтомский"
+    }
+  },
+  {
+    "model": "crm.region",
+    "pk": 45,
+    "fields": {
+      "name": "Котловка"
+    }
+  },
+  {
+    "model": "crm.region",
+    "pk": 46,
+    "fields": {
+      "name": "Красносельский"
+    }
+  },
+  {
+    "model": "crm.region",
+    "pk": 47,
+    "fields": {
+      "name": "Крылатское"
+    }
+  },
+  {
+    "model": "crm.region",
+    "pk": 48,
+    "fields": {
+      "name": "Крюково"
+    }
+  },
+  {
+    "model": "crm.region",
+    "pk": 49,
+    "fields": {
+      "name": "Кузьминки"
+    }
+  },
+  {
+    "model": "crm.region",
+    "pk": 50,
+    "fields": {
+      "name": "Кунцево"
+    }
+  },
+  {
+    "model": "crm.region",
+    "pk": 51,
+    "fields": {
+      "name": "Куркино"
+    }
+  },
+  {
+    "model": "crm.region",
+    "pk": 52,
+    "fields": {
+      "name": "Левобережный"
+    }
+  },
+  {
+    "model": "crm.region",
+    "pk": 53,
+    "fields": {
+      "name": "Лефортово"
+    }
+  },
+  {
+    "model": "crm.region",
+    "pk": 54,
+    "fields": {
+      "name": "Лианозово"
+    }
+  },
+  {
+    "model": "crm.region",
+    "pk": 55,
+    "fields": {
+      "name": "Ломоносовский"
+    }
+  },
+  {
+    "model": "crm.region",
+    "pk": 56,
+    "fields": {
+      "name": "Лосиноостровский"
+    }
+  },
+  {
+    "model": "crm.region",
+    "pk": 57,
+    "fields": {
+      "name": "Люблино"
+    }
+  },
+  {
+    "model": "crm.region",
+    "pk": 58,
+    "fields": {
+      "name": "Марфино"
+    }
+  },
+  {
+    "model": "crm.region",
+    "pk": 59,
+    "fields": {
+      "name": "Марьина роща"
+    }
+  },
+  {
+    "model": "crm.region",
+    "pk": 60,
+    "fields": {
+      "name": "Марьино"
+    }
+  },
+  {
+    "model": "crm.region",
+    "pk": 61,
+    "fields": {
+      "name": "Матушкино"
+    }
+  },
+  {
+    "model": "crm.region",
+    "pk": 62,
+    "fields": {
+      "name": "Медведково Северное"
+    }
+  },
+  {
+    "model": "crm.region",
+    "pk": 63,
+    "fields": {
+      "name": "Медведково Южное"
+    }
+  },
+  {
+    "model": "crm.region",
+    "pk": 64,
+    "fields": {
+      "name": "Метрогородок"
+    }
+  },
+  {
+    "model": "crm.region",
+    "pk": 65,
+    "fields": {
+      "name": "Мещанский"
+    }
+  },
+  {
+    "model": "crm.region",
+    "pk": 66,
+    "fields": {
+      "name": "Митино"
+    }
+  },
+  {
+    "model": "crm.region",
+    "pk": 67,
+    "fields": {
+      "name": "Можайский"
+    }
+  },
+  {
+    "model": "crm.region",
+    "pk": 68,
+    "fields": {
+      "name": "Молжаниновский"
+    }
+  },
+  {
+    "model": "crm.region",
+    "pk": 69,
+    "fields": {
+      "name": "Москворечье-Сабурово"
+    }
+  },
+  {
+    "model": "crm.region",
+    "pk": 70,
+    "fields": {
+      "name": "Нагатино-Садовники"
+    }
+  },
+  {
+    "model": "crm.region",
+    "pk": 71,
+    "fields": {
+      "name": "Нагатинский затон"
+    }
+  },
+  {
+    "model": "crm.region",
+    "pk": 72,
+    "fields": {
+      "name": "Нагорный"
+    }
+  },
+  {
+    "model": "crm.region",
+    "pk": 73,
+    "fields": {
+      "name": "Некрасовка"
+    }
+  },
+  {
+    "model": "crm.region",
+    "pk": 74,
+    "fields": {
+      "name": "Нижегородский"
+    }
+  },
+  {
+    "model": "crm.region",
+    "pk": 75,
+    "fields": {
+      "name": "Ново-Переделкино"
+    }
+  },
+  {
+    "model": "crm.region",
+    "pk": 76,
+    "fields": {
+      "name": "Новогиреево"
+    }
+  },
+  {
+    "model": "crm.region",
+    "pk": 77,
+    "fields": {
+      "name": "Новокосино"
+    }
+  },
+  {
+    "model": "crm.region",
+    "pk": 78,
+    "fields": {
+      "name": "Обручевский"
+    }
+  },
+  {
+    "model": "crm.region",
+    "pk": 79,
+    "fields": {
+      "name": "Орехово-Борисово Северное"
+    }
+  },
+  {
+    "model": "crm.region",
+    "pk": 80,
+    "fields": {
+      "name": "Орехово-Борисово Южное"
+    }
+  },
+  {
+    "model": "crm.region",
+    "pk": 81,
+    "fields": {
+      "name": "Останкинский"
+    }
+  },
+  {
+    "model": "crm.region",
+    "pk": 82,
+    "fields": {
+      "name": "Отрадное"
+    }
+  },
+  {
+    "model": "crm.region",
+    "pk": 83,
+    "fields": {
+      "name": "Очаково-Матвеевское"
+    }
+  },
+  {
+    "model": "crm.region",
+    "pk": 84,
+    "fields": {
+      "name": "Перово"
+    }
+  },
+  {
+    "model": "crm.region",
+    "pk": 85,
+    "fields": {
+      "name": "Печатники"
+    }
+  },
+  {
+    "model": "crm.region",
+    "pk": 86,
+    "fields": {
+      "name": "Покровское-Стрешнево"
+    }
+  },
+  {
+    "model": "crm.region",
+    "pk": 87,
+    "fields": {
+      "name": "Преображенское"
+    }
+  },
+  {
+    "model": "crm.region",
+    "pk": 88,
+    "fields": {
+      "name": "Пресненский"
+    }
+  },
+  {
+    "model": "crm.region",
+    "pk": 89,
+    "fields": {
+      "name": "Проспект Вернадского"
+    }
+  },
+  {
+    "model": "crm.region",
+    "pk": 90,
+    "fields": {
+      "name": "Раменки"
+    }
+  },
+  {
+    "model": "crm.region",
+    "pk": 91,
+    "fields": {
+      "name": "Ростокино"
+    }
+  },
+  {
+    "model": "crm.region",
+    "pk": 92,
+    "fields": {
+      "name": "Рязанский"
+    }
+  },
+  {
+    "model": "crm.region",
+    "pk": 93,
+    "fields": {
+      "name": "Савёлки"
+    }
+  },
+  {
+    "model": "crm.region",
+    "pk": 94,
+    "fields": {
+      "name": "Савёловский"
+    }
+  },
+  {
+    "model": "crm.region",
+    "pk": 95,
+    "fields": {
+      "name": "Свиблово"
+    }
+  },
+  {
+    "model": "crm.region",
+    "pk": 96,
+    "fields": {
+      "name": "Северный"
+    }
+  },
+  {
+    "model": "crm.region",
+    "pk": 97,
+    "fields": {
+      "name": "Силино"
+    }
+  },
+  {
+    "model": "crm.region",
+    "pk": 98,
+    "fields": {
+      "name": "Сокол"
+    }
+  },
+  {
+    "model": "crm.region",
+    "pk": 99,
+    "fields": {
+      "name": "Соколиная гора"
+    }
+  },
+  {
+    "model": "crm.region",
+    "pk": 100,
+    "fields": {
+      "name": "Сокольники"
+    }
+  },
+  {
+    "model": "crm.region",
+    "pk": 101,
+    "fields": {
+      "name": "Солнцево"
+    }
+  },
+  {
+    "model": "crm.region",
+    "pk": 102,
+    "fields": {
+      "name": "Старое Крюково"
+    }
+  },
+  {
+    "model": "crm.region",
+    "pk": 103,
+    "fields": {
+      "name": "Строгино"
+    }
+  },
+  {
+    "model": "crm.region",
+    "pk": 104,
+    "fields": {
+      "name": "Таганский"
+    }
+  },
+  {
+    "model": "crm.region",
+    "pk": 105,
+    "fields": {
+      "name": "Тверской"
+    }
+  },
+  {
+    "model": "crm.region",
+    "pk": 106,
+    "fields": {
+      "name": "Текстильщики"
+    }
+  },
+  {
+    "model": "crm.region",
+    "pk": 107,
+    "fields": {
+      "name": "Тёплый Стан"
+    }
+  },
+  {
+    "model": "crm.region",
+    "pk": 108,
+    "fields": {
+      "name": "Тимирязевский"
+    }
+  },
+  {
+    "model": "crm.region",
+    "pk": 109,
+    "fields": {
+      "name": "Тропарёво-Никулино"
+    }
+  },
+  {
+    "model": "crm.region",
+    "pk": 110,
+    "fields": {
+      "name": "Тушино Северное"
+    }
+  },
+  {
+    "model": "crm.region",
+    "pk": 111,
+    "fields": {
+      "name": "Тушино Южное"
+    }
+  },
+  {
+    "model": "crm.region",
+    "pk": 112,
+    "fields": {
+      "name": "Филёвский парк"
+    }
+  },
+  {
+    "model": "crm.region",
+    "pk": 113,
+    "fields": {
+      "name": "Фили-Давыдково"
+    }
+  },
+  {
+    "model": "crm.region",
+    "pk": 114,
+    "fields": {
+      "name": "Хамовники"
+    }
+  },
+  {
+    "model": "crm.region",
+    "pk": 115,
+    "fields": {
+      "name": "Ховрино"
+    }
+  },
+  {
+    "model": "crm.region",
+    "pk": 116,
+    "fields": {
+      "name": "Хорошёво-Мневники"
+    }
+  },
+  {
+    "model": "crm.region",
+    "pk": 117,
+    "fields": {
+      "name": "Хорошёвский"
+    }
+  },
+  {
+    "model": "crm.region",
+    "pk": 118,
+    "fields": {
+      "name": "Царицыно"
+    }
+  },
+  {
+    "model": "crm.region",
+    "pk": 119,
+    "fields": {
+      "name": "Черёмушки"
+    }
+  },
+  {
+    "model": "crm.region",
+    "pk": 120,
+    "fields": {
+      "name": "Чертаново Северное"
+    }
+  },
+  {
+    "model": "crm.region",
+    "pk": 121,
+    "fields": {
+      "name": "Чертаново Центральное"
+    }
+  },
+  {
+    "model": "crm.region",
+    "pk": 122,
+    "fields": {
+      "name": "Чертаново Южное"
+    }
+  },
+  {
+    "model": "crm.region",
+    "pk": 123,
+    "fields": {
+      "name": "Щукино"
+    }
+  },
+  {
+    "model": "crm.region",
+    "pk": 124,
+    "fields": {
+      "name": "Южнопортовый"
+    }
+  },
+  {
+    "model": "crm.region",
+    "pk": 125,
+    "fields": {
+      "name": "Якиманка"
+    }
+  },
+  {
+    "model": "crm.region",
+    "pk": 126,
+    "fields": {
+      "name": "Ярославский"
+    }
+  },
+  {
+    "model": "crm.region",
+    "pk": 127,
+    "fields": {
+      "name": "Ясенево"
+    }
+  }
+]

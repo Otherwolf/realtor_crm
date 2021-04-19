@@ -1,17 +1,19 @@
-from rest_framework.views import APIView
-from rest_framework.response import Response
-from django.core.paginator import Paginator
-from crm.serializers import ProfileSerializer, ComplexesShortSerializer, OldBuildingsShortSerializer, \
-    NewBuildingsShortSerializer, MainDeveloperSerializer, MainComplexSerilizer, \
-    MainOldSerilizer, DeveloperSubSerializer
-from crm.models.complexes import Complex
-from crm.models.lots import OldBuildingLot, NewBuildingLot
-from crm.models.developers import Developer
 from itertools import chain
-from django.shortcuts import get_object_or_404
+
+from django.core.paginator import Paginator
 from django.db.models import F
+from django.shortcuts import get_object_or_404
+from rest_framework.response import Response
+from rest_framework.views import APIView
 
-
+from crm.models.complexes import Complex
+from crm.models.developers import Developer
+from crm.models.lots import (OldBuildingLot, NewBuildingLot)
+from crm.serializers import (
+    ProfileSerializer, ComplexesShortSerializer, OldBuildingsShortSerializer,
+    NewBuildingsShortSerializer, MainDeveloperSerializer, MainComplexSerializer,
+    MainOldSerializer, DeveloperSubSerializer
+)
 
 
 class ProfileRest(APIView):
@@ -28,20 +30,19 @@ class LoadDataRest(APIView):
     ser2 = ComplexesShortSerializer
     ser3 = DeveloperSubSerializer
 
-    def is_empty(self, value):
-        return value == None or value == '' or value == []
+    @staticmethod
+    def is_empty(value) -> bool:
+        return value is None or value == '' or value == []
 
     def filter_by(self, querySet, property, value):
         if hasattr(querySet.model, property.split('__')[0]) and not self.is_empty(value):
             return querySet.exclude(**{property: value})
         return querySet
 
-
     def post(self, request, *args, **kwargs):
         page = request.data.get('page')
         counter = request.data.get('counter')
         filter = request.data.get('filter')
-
 
         if page == 'developers':
             objs = Developer.objects.all().order_by('name')
@@ -90,8 +91,8 @@ class LoadDataRest(APIView):
 
 class LoadMainRest(APIView):
     ser_dev = MainDeveloperSerializer
-    ser_com = MainComplexSerilizer
-    ser_old = MainOldSerilizer
+    ser_com = MainComplexSerializer
+    ser_old = MainOldSerializer
 
     def post(self, request, *args, **kwargs):
         id = request.data.get('id')
@@ -109,3 +110,6 @@ class LoadMainRest(APIView):
             obj = get_object_or_404(OldBuildingLot, id=id)
             ser_data = self.ser_old(obj)
         return Response(ser_data.data)
+
+
+__all__ = ('ProfileRest', 'LoadDataRest', 'LoadMainRest',)

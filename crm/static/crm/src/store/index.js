@@ -7,8 +7,6 @@ import Page from './Page'
 
 Vue.use(Vuex)
 
-// import issue from './issue'
-
 const store = new Vuex.Store({
   modules: {
     User,
@@ -20,7 +18,7 @@ const store = new Vuex.Store({
     count: 1
   },
   mutations: {
-    increment (state, payload) {
+    increment(state, payload) {
       state.count += payload.counter
     }
   }

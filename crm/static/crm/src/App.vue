@@ -7,12 +7,10 @@
       :indeterminate="isLoading"
       fixed
       color="blue accent-4"
-    ></v-progress-linear>
-    <fc-menu>
-    </fc-menu>
-    <router-view></router-view>
-    <alerts>
-    </alerts>
+    />
+    <fc-menu/>
+    <router-view/>
+    <alerts/>
   </v-app>
 </template>
 
@@ -38,17 +36,32 @@ export default {
   width: 100vw;
   min-height: 100vh;
 }
+
 body {
   font-size: 0.9em;
   overflow: hidden; /* Hide scrollbars */
 }
+
 body::-webkit-scrollbar {
-    display: none;
+  display: none;
 }
-::-webkit-scrollbar-track {border-radius: 4px;}
-::-webkit-scrollbar {width: 1px;}
-::-webkit-scrollbar-thumb {border-radius: 4px;background: #f0f2f5;}
-:hover::-webkit-scrollbar-thumb {background: #6a7d9b;}
+
+::-webkit-scrollbar-track {
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar {
+  width: 1px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background: #f0f2f5;
+}
+
+:hover::-webkit-scrollbar-thumb {
+  background: #6a7d9b;
+}
 
 .main-content {
   padding-top: 0 !important;
@@ -93,20 +106,25 @@ body::-webkit-scrollbar {
 .v-list-item:hover {
   background-color: #f0f7ff !important;
 }
+
 .v-data-table__selected:hover {
   background-color: #dfe9f3 !important;
 }
+
 img {
   object-fit: cover;
 }
+
 .bckg {
   background: rgb(243, 242, 242);
   background: linear-gradient(156deg, rgb(241, 240, 240) 0%, rgb(255, 255, 255) 100%);
   width: 96vw;
 }
+
 .v-expansion-panel:before {
   box-shadow: none !important;
 }
+
 .body-container {
   max-width: 100%;
   overflow-x: hidden !important;

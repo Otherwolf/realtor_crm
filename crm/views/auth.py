@@ -1,18 +1,22 @@
-from django.views.generic import TemplateView, RedirectView
-from django.contrib.auth import authenticate, login, logout
-from crm import forms
-from django.contrib.auth.models import User
-from django.urls import reverse
-from django.http import HttpResponseRedirect
 from uuid import uuid4
+
+from django.contrib.auth import (authenticate, login, logout)
+from django.contrib.auth import get_user_model
 from django.core.cache import cache
-from project import settings
-from django.template.loader import get_template
 from django.core.mail import send_mail
+from django.http import HttpResponseRedirect
+from django.template.loader import get_template
+from django.urls import reverse
+from django.views.generic import (TemplateView, RedirectView)
+
+from crm import forms
+from project import settings
+
+User = get_user_model()
 
 
 class LoginView(TemplateView):
-    template_name = 'auth/index.html'
+    template_name: str = 'auth/index.html'
 
     def get(self, request, *args, **kwargs):
         if request.user.is_authenticated:
@@ -89,14 +93,17 @@ class PasswordResetRequestView(TemplateView):
                 id = user[0].id
                 key_cache = 'reset_user_password_' + token
                 cache.set(key_cache, str(id), 60 * 60 * 24)
-                url_password =  request.get_host() +'/resetpas/' + token
+                url_password = request.get_host() + '/resetpas/' + token
                 html_template = 'mail/user_reset_password_mail.html'
                 msg_tmpl = get_template(html_template)
                 message = msg_tmpl.render({'url': url_password})
-                send_mail('Восстановление пароля', '', settings.EMAIL_HOST_USER, [email], html_message = message)
+                send_mail('Восстановление пароля', '', settings.EMAIL_HOST_USER, [email], html_message=message)
                 url = reverse('password_reset_reset')
                 return HttpResponseRedirect(url)
             else:
                 reset_form.add_error('email', 'Пользователя с таким email не существует ')
         kwargs.update(dict(reset_form=reset_form))
         return super().get(request=request, *args, **kwargs)
+
+
+__all__ = ('LoginView', 'LogoutView', 'PasswordResetRequestView',)

@@ -11,35 +11,24 @@ import SubDevelopers from '@/components/SubDevelopers'
 Vue.use(Router)
 
 export default new Router({
-  routes: [
-    {
-      name: 'profile',
-      path: '/profile',
-      component: Profile
-    },
-    {
-      path: '/index',
-      name: 'index',
-      component: Index,
-      children: [
-        {
-          path: 'lots',
-          components: {
-            main: Lots,
-            sub: SubComplexes
-          },
-          name: 'lots'
-        },
-        {
-          path: 'complexes',
-          components: {
-            main: Complexes,
-            sub: SubDevelopers
-          },
-          name: 'complexes'
-        }
-      ]
-    },
-    { path: '/', redirect: '/index/lots' }
+  routes: [{
+    name: 'profile',
+    path: '/profile',
+    component: Profile
+  }, {
+    path: '/index',
+    name: 'index',
+    component: Index,
+    children: [{
+      path: 'lots',
+      components: {main: Lots, sub: SubComplexes},
+      name: 'lots'
+    }, {
+      path: 'complexes',
+      components: {main: Complexes, sub: SubDevelopers},
+      name: 'complexes'
+    }]
+  },
+    {path: '/', redirect: '/index/lots'}
   ]
 })

@@ -2,4 +2,7 @@ from django.apps import AppConfig
 
 
 class CrmConfig(AppConfig):
-    name = 'crm'
+    name: str = 'crm'
+
+
+__all__ = ('CrmConfig',)

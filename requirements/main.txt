@@ -1,0 +1,22 @@
+# Django
+Django==3.1.6
+django-grappelli==2.14.3
+
+# Django Rest Framework
+djangorestframework==3.12.2
+
+# Image utils
+Pillow==8.1.0
+
+# Date utils
+pytz==2021.1
+
+# Network
+requests==2.25.1
+
+# Data
+redis==3.5.3
+
+split-settings==1.0.0
+feedparser==6.0.2
+gunicorn==20.0.4

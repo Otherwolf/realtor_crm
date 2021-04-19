@@ -1,6 +1,7 @@
-from crm import models
 from django.contrib.admin import TabularInline
 from django.utils.safestring import mark_safe
+
+from crm import models
 
 
 class ContactsInlineAdmin(TabularInline):
@@ -31,23 +32,30 @@ class DocumentInlineAdmin(TabularInline):
 class ImageInlineAdmin(TabularInline):
     extra = 0
     model = models.Image
-    readonly_fields = ('image_preview',)
     readonly_fields = ['get_created_at', 'get_size', 'image_preview']
     fields = ['image', 'get_created_at', 'get_size', 'image_preview']
 
-
-    def image_preview(self, obj):
+    @staticmethod
+    def image_preview(instance) -> str:
+        """Preview"""
         # ex. the name of column is "image"
-        if obj.image:
-            return mark_safe(
-                '<img src="{0}" width="250" height="auto" style="object-fit:contain" />'.format(obj.image.url))
+        if instance.image:
+            return mark_safe(f'<img src="{instance.image.url}" width="250" height="auto" style="object-fit:contain" />')
         else:
             return '(No image)'
-
-    image_preview.short_description = 'Preview'
 
 
 class TagInlineAdmin(TabularInline):
     extra = 0
     model = models.Tag
     fields = ['name']
+
+
+__all__ = (
+    'ContactsInlineAdmin',
+    'LinkInlineAdmin',
+    'LayoutInlineAdmin',
+    'DocumentInlineAdmin',
+    'ImageInlineAdmin',
+    'TagInlineAdmin',
+)

@@ -1,1 +1,51 @@
-[{"model": "crm.constructiontech", "pk": 2, "fields": {"name": "Кирпичный"}}, {"model": "crm.constructiontech", "pk": 3, "fields": {"name": "Монолитно-кирпичный"}}, {"model": "crm.constructiontech", "pk": 4, "fields": {"name": "Панельный"}}, {"model": "crm.constructiontech", "pk": 6, "fields": {"name": "Монолитно-каркасный"}}, {"model": "crm.constructiontech", "pk": 7, "fields": {"name": "Монолитно-блочный"}}, {"model": "crm.constructiontech", "pk": 8, "fields": {"name": "Силикатный кирпич"}}, {"model": "crm.constructiontech", "pk": 9, "fields": {"name": "Керамический кирпич"}}]
+[
+  {
+    "model": "crm.constructiontech",
+    "pk": 2,
+    "fields": {
+      "name": "Кирпичный"
+    }
+  },
+  {
+    "model": "crm.constructiontech",
+    "pk": 3,
+    "fields": {
+      "name": "Монолитно-кирпичный"
+    }
+  },
+  {
+    "model": "crm.constructiontech",
+    "pk": 4,
+    "fields": {
+      "name": "Панельный"
+    }
+  },
+  {
+    "model": "crm.constructiontech",
+    "pk": 6,
+    "fields": {
+      "name": "Монолитно-каркасный"
+    }
+  },
+  {
+    "model": "crm.constructiontech",
+    "pk": 7,
+    "fields": {
+      "name": "Монолитно-блочный"
+    }
+  },
+  {
+    "model": "crm.constructiontech",
+    "pk": 8,
+    "fields": {
+      "name": "Силикатный кирпич"
+    }
+  },
+  {
+    "model": "crm.constructiontech",
+    "pk": 9,
+    "fields": {
+      "name": "Керамический кирпич"
+    }
+  }
+]

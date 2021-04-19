@@ -1,5 +1,6 @@
+from typing import (List, Tuple)
 
-DOCUMENT_TYPES = [
+DOCUMENT_TYPES: List[Tuple[str, str]] = [
     ('Презентация', 'Презентация'),
     ('Презентация без контактов', 'Презентация без контактов'),
     ('Цены', 'Цены'),
@@ -7,19 +8,13 @@ DOCUMENT_TYPES = [
     ('Прочее', 'Прочее'),
 ]
 
-LOT_STATUSES = [
-    ('Продано', 'Продано'),
-    ('Забронировано', 'Забронировано'),
-    ('Свободно', 'Свободно'),
-]
 
-
-VIEW_FROM_WINDOWS = [
+VIEW_FROM_WINDOWS: List[Tuple[str, str]] = [
     ('На улицу', 'На улицу'),
     ('Во двор', 'Во двор')
 ]
 
-NAME_TYPE_ROOMS = [
+NAME_TYPE_ROOMS: List[Tuple[str, str]] = [
     ('студия', 'студия'),
     ('с 1-ой спальней', 'с 1-ой спальней'),
     ('с 2-мя спальнями', 'с 2-мя спальнями'),
@@ -27,3 +22,8 @@ NAME_TYPE_ROOMS = [
     ('с 4-ой спальней', 'с 4-ой спальней')
 ]
 
+__all__ = (
+    'DOCUMENT_TYPES',
+    'VIEW_FROM_WINDOWS',
+    'NAME_TYPE_ROOMS',
+)

@@ -15,7 +15,7 @@
     >
       <template v-slot:item.id="{ item }">
         <div :class="'developer-' + item.developer.id">
-          <span>{{item.id}}</span>
+          <span>{{ item.id }}</span>
         </div>
       </template>
     </v-data-table>
@@ -25,7 +25,8 @@
         :should-handle="!loading"
         scrollContainer="scroll"
         v-if="!isFinished"
-        class="text-center">
+        class="text-center"
+      >
         Загрузка...
       </mugen-scroll>
     </div>
@@ -38,23 +39,21 @@ import {mapGetters} from 'vuex'
 
 export default {
   name: 'Complexes',
-  components: {
-    'mugen-scroll': MugenScroll
-  },
-  data () {
+  components: {'mugen-scroll': MugenScroll},
+  data() {
     return {
       selected: [],
       loading: false,
       counter: 30,
       headers: [
-        { text: 'id', value: 'id' },
-        { text: 'Имя', value: 'name' },
-        { text: 'Адрес', value: 'address' },
-        { text: 'Сдача', value: 'end_of_construction' }
+        {text: 'id', value: 'id'},
+        {text: 'Имя', value: 'name'},
+        {text: 'Адрес', value: 'address'},
+        {text: 'Сдача', value: 'end_of_construction'}
       ]
     }
   },
-  created () {
+  created() {
     this.fetchData()
   },
   computed: {
@@ -62,19 +61,15 @@ export default {
     ...mapGetters('Page', {isFinished: 'isFinished'})
   },
   methods: {
-    clearSelect () {
+    clearSelect() {
       const itemsForRemove = document.querySelectorAll('.v-data-table__selected')
       itemsForRemove.forEach(item => {
         item.classList.remove('v-data-table__selected')
       })
     },
-    fetchData () {
+    fetchData() {
       this.loading = true
-      this.$store.dispatch('Page/load', {
-        page: this.$route.name
-      }, {
-        root: true
-      })
+      this.$store.dispatch('Page/load', {page: this.$route.name}, {root: true})
       setTimeout(() => {
         this.counter = this.complexes.length
         this.loading = false
@@ -83,6 +78,3 @@ export default {
   }
 }
 </script>
-
-<style scoped>
-</style>

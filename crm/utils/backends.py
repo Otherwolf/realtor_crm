@@ -5,7 +5,7 @@ from django.contrib.auth.backends import ModelBackend
 class CustomModelBackend(ModelBackend):
 
     @staticmethod
-    def _get_username_attempts_cache_key(username):
+    def _get_username_attempts_cache_key(username) -> str:
         cache_key = [
             'CustomModelBackend',
             'userLoginAttemptsCount',
@@ -58,3 +58,6 @@ class CustomModelBackend(ModelBackend):
 
     def user_can_authenticate(self, user):
         return super().user_can_authenticate(user) and not self.is_user_failed_attempts_exceeded(user.username)
+
+
+__all__ = ('CustomModelBackend',)

@@ -1,1 +1,58 @@
-[{"model": "crm.premisestype", "pk": 2, "fields": {"name": "Апартаменты"}}, {"model": "crm.premisestype", "pk": 3, "fields": {"name": "Квартиры"}}, {"model": "crm.premisestype", "pk": 4, "fields": {"name": "Таунхаусы"}}, {"model": "crm.premisestype", "pk": 5, "fields": {"name": "Особняки"}}, {"model": "crm.premisestype", "pk": 6, "fields": {"name": "Вилла"}}, {"model": "crm.premisestype", "pk": 7, "fields": {"name": "Пентхаусы"}}, {"model": "crm.premisestype", "pk": 8, "fields": {"name": "Коммерция"}}, {"model": "crm.premisestype", "pk": 9, "fields": {"name": "Офисы"}}]
+[
+  {
+    "model": "crm.premisestype",
+    "pk": 2,
+    "fields": {
+      "name": "Апартаменты"
+    }
+  },
+  {
+    "model": "crm.premisestype",
+    "pk": 3,
+    "fields": {
+      "name": "Квартиры"
+    }
+  },
+  {
+    "model": "crm.premisestype",
+    "pk": 4,
+    "fields": {
+      "name": "Таунхаусы"
+    }
+  },
+  {
+    "model": "crm.premisestype",
+    "pk": 5,
+    "fields": {
+      "name": "Особняки"
+    }
+  },
+  {
+    "model": "crm.premisestype",
+    "pk": 6,
+    "fields": {
+      "name": "Вилла"
+    }
+  },
+  {
+    "model": "crm.premisestype",
+    "pk": 7,
+    "fields": {
+      "name": "Пентхаусы"
+    }
+  },
+  {
+    "model": "crm.premisestype",
+    "pk": 8,
+    "fields": {
+      "name": "Коммерция"
+    }
+  },
+  {
+    "model": "crm.premisestype",
+    "pk": 9,
+    "fields": {
+      "name": "Офисы"
+    }
+  }
+]
